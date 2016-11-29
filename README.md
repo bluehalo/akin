@@ -89,6 +89,9 @@ Small note: If editing the README, please conform to the [standard-readme](https
 ## License
 
 Copyright © Asymmetrik Ltd, A Maryland corporation - All Rights Reserved
+
 Unauthorized copying of this library, or any of its source files, via any medium is strictly prohibited
+
 Proprietary and Confidential
+
 Originally written by Brian Ghigiarelli <brian@asymmetrik.com>, September 2016
