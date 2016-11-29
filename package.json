@@ -2,6 +2,11 @@
   "name": "@asymmetrik/akin",
   "description": "Recommendation Engine based on Collaborative Filtering",
   "version": "0.0.1",
+
+  "author": "Asymmetrik, Ltd.",
+  "copyright": "Copyright Asymmetrik, Ltd. 2007-2017 - All Rights Reserved.",
+  "license": "UNLICENSED",
+
   "repository": {
     "type": "git",
     "url": "https://github.com/asymmetrik/akin.git"
