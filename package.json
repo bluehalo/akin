@@ -1,0 +1,25 @@
+{
+  "name": "@asymmetrik/akin",
+  "description": "Recommendation Engine based on Collaborative Filtering",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asymmetrik/akin.git"
+  },
+  "engines": {
+    "node": "5.0.0",
+    "npm": "3.3.10"
+  },
+  "scripts": {
+  },
+  "dependencies": {
+    "bluebird": "3.4.6",
+    "lodash": "3.10",
+    "moment": "2.10"
+  },
+  "peerDependencies": {
+    "mongoose": "4.x"
+  },
+  "devDependencies": {
+  }
+}
