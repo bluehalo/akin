@@ -1,9 +1,9 @@
 'use strict';
 
-exports.activity = require('./lib/activity.service.js');
-exports.similarity = require('./lib/similarity.service.js');
-exports.recommendation = require('./lib/recommendation.service.js');
-exports.model = require('./lib/model.service.js');
+exports.activity = require('./lib/activity.service');
+exports.similarity = require('./lib/similarity.service');
+exports.recommendation = require('./lib/recommendation.service');
+exports.model = require('./lib/model.service');
 
 exports.run = function() {
     return exports.activity.recalculateUserItemWeights()

@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "6.9"
+services:
+ - mongodb
+before_script:
+  - npm install
+script:
+  - npm test
+sudo: false
