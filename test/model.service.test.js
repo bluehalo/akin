@@ -19,7 +19,7 @@ describe('Model Service', () => {
     });
 
     after(() => {
-        UserActivity.remove({}).then(() => {
+        return UserActivity.remove({}).then(() => {
             return UserActivity.count().then((count) => {
                 should(count).equal(0);
             });
