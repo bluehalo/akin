@@ -1,6 +1,8 @@
 # @asymmetrik/akin
 
 [![Build Status](https://travis-ci.org/Asymmetrik/akin.svg?branch=master)](https://travis-ci.org/Asymmetrik/akin)
+[![Code Climate](https://codeclimate.com/github/Asymmetrik/akin/badges/gpa.svg)](https://codeclimate.com/github/Asymmetrik/akin)
+[![Test Coverage](https://codeclimate.com/github/Asymmetrik/akin/badges/coverage.svg)](https://codeclimate.com/github/Asymmetrik/akin/coverage)
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 > Recommendation Engine Library based on Collaborative Filtering. Node.js implementation using MongoDB via Mongoose.

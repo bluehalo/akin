@@ -16,6 +16,7 @@
     "npm": "3.3.10"
   },
   "scripts": {
+    "pretest": "istanbul cover node_modules/mocha/bin/_mocha",
     "test": "mocha"
   },
   "dependencies": {
@@ -28,6 +29,7 @@
     "mongoose": "4.x"
   },
   "devDependencies": {
+    "istanbul": "0.4.5",
     "mocha": "3.1",
     "mochawesome": "1.5",
     "mocha-lcov-reporter": "0.0.2",
