@@ -7,6 +7,6 @@ exports.model = require('./lib/model.service');
 
 exports.run = function() {
     return exports.activity.recalculateUserItemWeights()
-           		.then(exports.similarity.recalculateUserSimilarities)
-           		.then(exports.recommendation.recalculateUserRecommendations);
+            .then(exports.similarity.recalculateUserSimilarities)
+            .then(exports.recommendation.recalculateUserRecommendations);
 };
