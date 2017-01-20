@@ -2,11 +2,9 @@
   "name": "@asymmetrik/akin",
   "description": "Recommendation Engine based on Collaborative Filtering",
   "version": "0.1.0",
-
   "author": "Asymmetrik, Ltd.",
   "copyright": "Copyright Asymmetrik, Ltd. 2007-2017 - All Rights Reserved.",
   "license": "UNLICENSED",
-
   "repository": {
     "type": "git",
     "url": "https://github.com/asymmetrik/akin.git"
@@ -17,7 +15,8 @@
   },
   "scripts": {
     "pretest": "istanbul cover node_modules/mocha/bin/_mocha",
-    "test": "mocha"
+    "test": "mocha",
+    "posttest": "eslint ./index.js ./lib"
   },
   "dependencies": {
     "bluebird": "3.4.6",
@@ -29,10 +28,11 @@
     "mongoose": "4.x"
   },
   "devDependencies": {
+    "eslint": "3.13",
     "istanbul": "0.4.5",
     "mocha": "3.1",
-    "mochawesome": "1.5",
     "mocha-lcov-reporter": "0.0.2",
+    "mochawesome": "1.5",
     "mongoose": "4.x",
     "should": "11.1"
   }
