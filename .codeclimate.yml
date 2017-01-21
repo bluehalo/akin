@@ -9,3 +9,7 @@ engines:
         javascript:
   fixme:
     enabled: true
+ratings:
+  paths:
+  - "index.js"
+  - "lib/**/*.js"
