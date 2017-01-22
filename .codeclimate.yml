@@ -13,3 +13,5 @@ ratings:
   paths:
   - "index.js"
   - "lib/**/*.js"
+exclude_paths:
+  - "test/**/*.test.js"
