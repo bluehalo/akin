@@ -1,6 +1,5 @@
-var should = require('should');
-
-var sampleService = require('../lib/sample.service');
+const should = require('should'),
+    sampleService = require('../lib/sample.service');
 
 describe('Sample Service', function() {
     it('should return nothing for 0 samples', (done) => {

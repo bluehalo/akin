@@ -1,21 +1,22 @@
 'use strict';
 
-let mongoose = require('mongoose'),
-    Schema = mongoose.Schema,
-    Promise = require('bluebird'),
+const mongoose = require('mongoose'),
     should = require('should'),
 
-    modelService = require('../lib/model.service');
+    ObjectId = mongoose.Types.ObjectId,
 
-let UserActivity = mongoose.model('UserActivity');
+    modelService = require('../lib/model.service'),
 
-let mongoDbTestConnectionString = 'mongodb://localhost/akin-test';
+    UserActivity = mongoose.model('UserActivity'),
+
+    mongoDbTestConnectionString = 'mongodb://localhost/akin-test';
 
 describe('Model Service', () => {
 
     before(() => {
+        mongoose.Promise = global.Promise;
         // connect to mongo test instance
-        return mongoose.connect(mongoDbTestConnectionString);
+        return mongoose.connect(mongoDbTestConnectionString, { useMongoClient: true });
     });
 
     after(() => {
@@ -39,11 +40,9 @@ describe('Model Service', () => {
 
     it('should create user activity', (done) => {
 
-        let now = new Date();
-
         new UserActivity({
-            user: Schema.ObjectId(),
-            item: Schema.ObjectId(),
+            user: ObjectId(),
+            item: ObjectId(),
             itemType: 'test-type',
             action: 'test-action'
         }).save().then((userActivity) => {
