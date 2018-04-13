@@ -1,6 +1,5 @@
 let akin = require('../index'),
     _ = require('lodash'),
-    Promise = require('bluebird'),
     mongoose = require('mongoose'),
     should = require('should'),
 
@@ -18,8 +17,9 @@ describe('AKIN Recommendation Engine', () => {
         item2 = ObjectId();
 
     before(() => {
+        mongoose.Promise = global.Promise;
         // connect to mongo test instance
-        return mongoose.connect(mongoDbTestConnectionString);
+        return mongoose.connect(mongoDbTestConnectionString, { useMongoClient: true });
     });
 
     after(() => {
