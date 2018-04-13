@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "lodash": "4.17",
-    "moment": "2.19",
+    "moment": "2.22",
     "weighted-random-object": "1.0.6"
   },
   "peerDependencies": {
