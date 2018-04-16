@@ -1,7 +1,7 @@
 {
   "name": "@asymmetrik/akin",
   "description": "Recommendation Engine based on Collaborative Filtering",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Asymmetrik, Ltd.",
   "copyright": "Copyright Asymmetrik, Ltd. 2007-2017 - All Rights Reserved.",
   "license": "UNLICENSED",
