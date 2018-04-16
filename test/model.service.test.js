@@ -43,10 +43,10 @@ describe('Model Service', () => {
         new UserActivity({
             user: ObjectId(),
             item: ObjectId(),
-            itemType: 'test-type',
+            itemMetadata: { type: 'test-type' },
             action: 'test-action'
         }).save().then((userActivity) => {
-            should(userActivity.itemType).equal('test-type');
+            should(userActivity.itemMetadata).eql({ type: 'test-type' });
             done();
         });
     });
