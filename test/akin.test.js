@@ -1,9 +1,7 @@
 let akin = require('../index'),
     _ = require('lodash'),
     mongoose = require('mongoose'),
-    should = require('should'),
-
-    ObjectId = mongoose.Types.ObjectId;
+    should = require('should');
 
 let mongoDbTestConnectionString = 'mongodb://localhost/akin-test',
     UserActivity = akin.model.model.UserActivity,
@@ -11,10 +9,10 @@ let mongoDbTestConnectionString = 'mongodb://localhost/akin-test',
 
 describe('AKIN Recommendation Engine', () => {
 
-    let user1 = ObjectId(),
-        user2 = ObjectId(),
-        item1 = ObjectId(),
-        item2 = ObjectId();
+    let user1 = 'user01',
+        user2 = 'user02',
+        item1 = 'item01',
+        item2 = 'item02';
 
     before(() => {
         mongoose.Promise = global.Promise;

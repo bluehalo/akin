@@ -40,7 +40,7 @@ var akin = require('@asymmetrik/akin');
 
 The most fundamental use case of logging user activity, running the engine, and retrieving recommendations for a user is achieved via:
 ```
-akin.activity.log(userId, itemId, 'itemType', 'action');
+akin.activity.log(userId, itemId, { type: 'itemType' }, 'action');
 ...
 akin.run();
 ...
@@ -71,7 +71,7 @@ Execute the recommendation engine based on the data supplied to the activity.log
 
 ### activity
 Add a user's activity on an item
-> akin.activity.log(userId, itemId, 'itemType', 'actionType');
+> akin.activity.log(userId, itemId, { type: 'itemType' }, 'actionType');
 
 Remove a user's activity on an item
 > akin.activity.removeLog(userId, itemId, 'actionType');

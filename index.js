@@ -1,12 +1,23 @@
 'use strict';
 
-exports.activity = require('./lib/activity.service');
-exports.similarity = require('./lib/similarity.service');
-exports.recommendation = require('./lib/recommendation.service');
-exports.model = require('./lib/model.service');
+const activity = require('./lib/activity.service'),
+    similarity = require('./lib/similarity.service'),
+    recommendation = require('./lib/recommendation.service'),
+    model = require('./lib/model.service');
 
-exports.run = function() {
-    return exports.activity.recalculateUserItemWeights()
-            .then(exports.similarity.recalculateUserSimilarities)
-            .then(exports.recommendation.recalculateUserRecommendations);
+const run = function() {
+    return activity.recalculateUserItemWeights()
+            .then(similarity.recalculateUserSimilarities)
+            .then(recommendation.recalculateUserRecommendations);
+};
+
+/**
+ * Public API
+ */
+module.exports = {
+    activity,
+    model,
+    recommendation,
+    run,
+    similarity
 };
