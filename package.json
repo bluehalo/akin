@@ -1,7 +1,7 @@
 {
   "name": "@asymmetrik/akin",
   "description": "Recommendation Engine based on Collaborative Filtering",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Asymmetrik Ltd.",
   "contributors": [
     "Brian Ghigiarelli <bghigiarelli@asymmetrik.com>"
