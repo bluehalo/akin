@@ -14,6 +14,17 @@ describe('AKIN Recommendation Engine', () => {
         item1 = 'item01',
         item2 = 'item02';
 
+    const verifyTestResults = (done) => {
+        return (results) => {
+            var recommendations = results.recommendations;
+            should(recommendations).be.a.Array();
+            should(recommendations.length).equal(2);
+            var item2Recommendation = _.find(recommendations, ['item', item2]);
+            should(item2Recommendation.weight).equal(0.7071067811865475);
+            done();
+        };
+    };
+
     before(() => {
         mongoose.Promise = global.Promise;
         // connect to mongo test instance
@@ -51,14 +62,17 @@ describe('AKIN Recommendation Engine', () => {
         .then(() => {
             return akin.model.getAllRecommendationsForUser(user2);
         })
-        .then((results) => {
-            var recommendations = results.recommendations;
-            should(recommendations).be.a.Array();
-            should(recommendations.length).equal(2);
-            var item2Recommendation = _.find(recommendations, ['item', item2]);
-            should(item2Recommendation.weight).equal(0.7071067811865475);
-            done();
+        .then(verifyTestResults(done))
+        .catch(done);
+    });
+
+    it('should calculate the same score for higher concurrency levels', function(done) {
+        akin.setConcurrency(4)
+        .then(akin.run)
+        .then(() => {
+            return akin.model.getAllRecommendationsForUser(user2);
         })
+        .then(verifyTestResults(done))
         .catch(done);
     });
 
