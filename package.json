@@ -1,5 +1,5 @@
 {
-  "name": "@asymmetrik/akin",
+  "name": "@charuru/akin",
   "description": "Recommendation Engine based on Collaborative Filtering",
   "version": "0.2.5",
   "author": "Asymmetrik Ltd.",
@@ -9,7 +9,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/asymmetrik/akin.git"
+    "url": "https://github.com/charuru/akin.git"
   },
   "engines": {
     "node": ">=6"
