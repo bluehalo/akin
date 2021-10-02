@@ -1,18 +1,15 @@
 {
-  "name": "@asymmetrik/akin",
-  "description": "Recommendation Engine based on Collaborative Filtering",
-  "version": "0.2.4",
-  "author": "Asymmetrik Ltd.",
+  "name": "@charuru/akin",
+  "version": "0.2.10",
   "contributors": [
-    "Brian Ghigiarelli <bghigiarelli@asymmetrik.com>"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/asymmetrik/akin.git"
+    "url": "https://github.com/charuru/akin.git"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=11"
   },
   "scripts": {
     "pretest": "istanbul cover node_modules/mocha/bin/_mocha",
